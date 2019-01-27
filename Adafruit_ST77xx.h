@@ -94,6 +94,7 @@ class Adafruit_ST77xx : public Adafruit_SPITFT {
 
     void setAddrWindow(uint16_t x, uint16_t y, uint16_t w, uint16_t h);
     void setRotation(uint8_t r);
+    void setColRowStart(int8_t col, int8_t row);
 
   protected:
     uint8_t _colstart = 0, ///< Some displays need this changed to offset
@@ -102,7 +103,6 @@ class Adafruit_ST77xx : public Adafruit_SPITFT {
     void    begin(uint32_t freq = 0);
     void    commonInit(const uint8_t *cmdList);
     void    displayInit(const uint8_t *addr);
-    void    setColRowStart(int8_t col, int8_t row);
 };
 
 #endif // _ADAFRUIT_ST77XXH_
